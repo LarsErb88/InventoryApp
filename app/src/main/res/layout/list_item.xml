@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/listItem"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?android:textAppearanceMedium"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/price"
+        style="@style/listItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:text="summary" />
+
+    <TextView
+        android:id="@+id/inStock"
+        style="@style/listItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="summary" />
+
+    <TextView
+        android:id="@+id/quantity"
+        style="@style/listItem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inStock"
+        tools:text="Name" />
+
+    <Button
+        android:id="@+id/sale"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:focusable="false"
+        android:text="@string/sale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/goodOrBad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/mood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sale"
+        app:layout_constraintStart_toEndOf="@+id/inStock"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/good" />
+
+</android.support.constraint.ConstraintLayout>
